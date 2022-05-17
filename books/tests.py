@@ -10,11 +10,11 @@ from .serializers import AuthorSerializer
 
 class AuthorTestCase(TestCase):
     def setUp(self):
-        Author.objects.create(last_name="Петров", first_name="Олег", patronymic="Сергеевич")
+        Author.objects.create(last_name="Николаев", first_name="Олег", patronymic="Сергеевич")
         Author.objects.create(last_name="Иванова", first_name="Евгения", patronymic="Михайловна")
 
     def test_author_created(self):
-        self.assertEqual(Author.objects.get(pk=1).last_name, "Петров")
+        self.assertEqual(Author.objects.get(pk=1).last_name, "Николаев")
 
 
 class GetAllAuthors(TestCase):
